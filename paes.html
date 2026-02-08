@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PAES — Guía de Estudio (Solo PAES)</title>
+  <meta name="description" content="Guía PAES: estrategia, método, materias, ensayos y plan base. Solo PAES." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="paes.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">⟡</div>
+      <div>
+        <div class="title">PAES</div>
+        <div class="subtitle">Guía simple, potente y sin saturación</div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="continueBtn" class="btn primary">▶ Continuar donde quedé</button>
+      <button id="themeBtn" class="btn ghost"><span id="themeIcon">🌙</span> Modo</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="side">
+      <div class="sideCard">
+        <div class="sideTitle">Navegación</div>
+
+        <div class="searchWrap">
+          <input id="searchInput" class="input" type="search" placeholder="Buscar en la guía (ej: 'M1', 'ensayos', 'errores')">
+        </div>
+
+        <nav id="nav" class="nav"></nav>
+
+        <div class="miniStats">
+          <div class="stat">
+            <div class="statKey">Progreso</div>
+            <div class="statVal" id="progressVal">0%</div>
+          </div>
+          <div class="stat">
+            <div class="statKey">Hecho</div>
+            <div class="statVal" id="doneVal">0/0</div>
+          </div>
+        </div>
+
+        <button id="resetBtn" class="btn ghost full">Reiniciar progreso</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <article class="card">
+        <h1>PAES: la guía que sí funciona</h1>
+        <p class="muted">
+          La PAES es un <b>juego con reglas</b>: premia al que entiende la pregunta, responde rápido,
+          evita errores típicos, maneja el tiempo y practica formato real.
+        </p>
+
+        <div class="pillRow">
+          <span class="pill">Contenido</span>
+          <span class="pill">Habilidades</span>
+          <span class="pill">Entrenamiento</span>
+        </div>
+
+        <div class="callout">
+          <b>Regla de oro:</b> no es estudiar más, es estudiar <b>mejor</b>.
+          Si corriges bien, subes rápido.
+        </div>
+      </article>
+
+      <!-- SECCIONES (se llenan con JS para poder buscar y marcar completado) -->
+      <div id="sections"></div>
+
+      <footer class="footer">
+        <div class="muted small">
+          Guardado automático en tu dispositivo (localStorage). Ideal para “Continuar donde quedé”.
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="paes.js"></script>
+</body>
+</html>
